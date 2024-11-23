@@ -3,13 +3,13 @@
 <br />
 <div align="center">
   <a href="https://github.com/forbug/mlops_team6_final">
-    <img src="images/bike_img.png" alt="Logo" width="80" height="80">
+    <img src="images/bike_img.jpg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">MLOps Final - Team 6</h3>
 
   <p align="center">
-    University of Chicago MSADS MLOps (ADSP 32021) AU2024 Final Project - Demonstrating MLOps best practices via a bike-share regression model use case. Deployed on databricks.
+    University of Chicago MSADS MLOps (ADSP 32021) AU2024 Final Project
     <br />
     <a href="https://github.com/forbug/mlops_team6_final"><strong>Explore the docs »</strong></a>
     <br />
@@ -67,7 +67,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+In order to run this project and leverage all of the intended features, the repository must be housed in a databricks workspace.
 * npm
   ```sh
   npm install npm@latest -g
