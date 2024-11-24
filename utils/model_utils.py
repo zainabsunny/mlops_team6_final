@@ -20,6 +20,15 @@ def run_model_train_pipeline(train_df, timeout=5):
     return model, model_uri, model_name
 
 
-def deploy_model(model):
+def run_inference(model, X_test, y_test, run_name):
 
-    pass
+    with mlflow.start_run(run_name=run_name):
+        predictions = model.predict(X_test)
+        mse = mean_squared_error(y_test, predictions)
+        r2 = r2_score(y_test, predictions)
+        
+        # mlflow.log_param('n_estimators', n_estimators)
+        mlflow.log_metric('mse', mse)
+        mlflow.log_metric('r2', r2)
+
+    return predictions, mse, r2

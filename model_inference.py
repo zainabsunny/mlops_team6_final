@@ -1,6 +1,5 @@
 import argparse
 
-
 import utils.data_utils as data_utils
 import utils.model_utils as model_utils
 
@@ -20,13 +19,14 @@ if __name__ == "__main__":
     # using R2 metric
     model, model_uri, model_name = model_utils.run_model_train_pipeline(bike_train, args.max_automl_runtime)
 
-    # Deploy the model (how??)
 
-
-    # Set up model monitoring
-
+    # Run inference on the original test set
+    # TODO
 
     # Change the test dataset (2 features)
+
+    # Run inference on the changed test set
+    # TODO
 
 
 
