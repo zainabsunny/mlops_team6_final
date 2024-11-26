@@ -85,6 +85,38 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+
+<!-- USAGE EXAMPLES -->
+## Roadmap
+
+This section outlines the key steps and outcomes of the analysis, showcasing how the project can be applied effectively. Screenshots, code examples, and visualizations are included to provide a comprehensive understanding of the workflow. Additional resources and documentation links are provided where applicable.
+
+- ### Exploratory Data Analysis (EDA) and Insights
+  This phase focuses on uncovering patterns and trends in the data. Key visualizations and statistical summaries are presented to provide a clear understanding of the dataset. Screenshots and plots highlight relationships, distributions, and potential anomalies.
+
+  [PLACEHOLDER FOR IMAGES]
+
+- ### Data Pipeline
+  The data pipeline automates the process from data ingestion to preprocessing and feature engineering. Screenshots and diagrams illustrate the pipeline architecture, highlighting its scalability and robustness.
+
+  [PLACEHOLDER FOR IMAGES]
+
+- ### Model Deployment and Monitoring
+
+  This section demonstrates how the model is deployed in a production environment. Monitoring tools and dashboards track performance metrics and ensure the model's reliability over time. Screenshots provide a visual guide to the monitoring process.
+
+  [PLACEHOLDER FOR IMAGES]
+
+- ### Validation and Continuous Improvement
+  Validation metrics, such as RMSE, and MAE are presented to evaluate model performance. This section also includes examples of changes made based on feedback or updated data, showcasing the iterative improvement process.
+
+  [PLACEHOLDER FOR IMAGES]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
 <!-- CONTRIBUTING -->
 ## Contributing
 
