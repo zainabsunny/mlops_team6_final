@@ -29,9 +29,10 @@ predictions, mse, r2 = model_utils.run_inference(model, bike_prod, run_name='ori
 # COMMAND ----------
 
 # Change the test dataset (2 features)
-adjusted_bike_prod = bike_prod.copy()
+#adjusted_bike_prod = bike_prod.copy()
+altered_bike_prod = data_utils.update_feature_data(bike_prod)
 
 # COMMAND ----------
 
 # Run inference on the changed test set
-preds_changed, mse_changed, r2_changed = model_utils.run_inference(model, adjusted_bike_prod, run_name='changed_test_run')
+preds_changed, mse_changed, r2_changed = model_utils.run_inference(model, altered_bike_prod, run_name='changed_test_run')

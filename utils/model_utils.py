@@ -5,6 +5,8 @@ import utils.data_utils as data_utils
 from databricks import automl
 from sklearn.metrics import mean_squared_error, r2_score
 
+mlflow.set_experiment("/Users/zainab786@uchicago.edu/databricks_automl")
+
 def run_model_train_pipeline(train_df, timeout=5):
 
     summary = automl.regress(train_df, target_col="cnt", timeout_minutes=timeout)
@@ -32,5 +34,7 @@ def run_inference(model, test_df, run_name):
         # mlflow.log_param('n_estimators', n_estimators)
         mlflow.log_metric('mse', mse)
         mlflow.log_metric('r2', r2)
+
+        print(f"Run Name: {run_name} -> MSE: {mse}, R2: {r2}")
 
     return predictions, mse, r2
