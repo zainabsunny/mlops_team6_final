@@ -5,9 +5,9 @@ import utils.data_utils as data_utils
 from databricks import automl
 from sklearn.metrics import mean_squared_error, r2_score
 
-def run_model_train_pipeline(train_df, timeout=5):
+def run_model_train_pipeline(train_df, timeout=5, experiment_name=None):
 
-    summary = automl.regress(train_df, target_col="cnt", timeout_minutes=timeout)
+    summary = automl.regress(train_df, target_col="cnt", timeout_minutes=timeout, experiment_name=experiment_name)
     
     print("*******Summary of Databricks AutoML Results*******")
     print(summary)

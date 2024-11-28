@@ -42,8 +42,11 @@ def get_x_y_split(bike_df):
 
 
 def update_feature_data(bike_df):
-    # ZAINAB TODO
-    pass
+    altered_bike_df = bike_df.copy()
+    altered_bike_df["temp"] *= 1.2  # Increase temperature by 20%
+    altered_bike_df["windspeed"] *= 0.8  # Decrease windspeed by 20%
+    
+    return altered_bike_df
 
 
 def change_test_features(bike_test):

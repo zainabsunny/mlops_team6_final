@@ -17,9 +17,19 @@ bike_train, bike_prod = data_utils.get_train_test_split(bike_df)
 
 # COMMAND ----------
 
+EXP_DIR = "/Users/forbug@uchicago.edu/databricks_automl"
+EXP_NAME = f"mlops_final_{datetime.datetime.today()}"
+EXP_PATH = f"{EXP_DIR}/{EXP_NAME}"
+
+# COMMAND ----------
+
 # Use AutoML to train an ML model - evaluate
 # using R2 metric
-model, model_uri, model_name = model_utils.run_model_train_pipeline(bike_train, 5)
+model, model_uri, model_name = model_utils.run_model_train_pipeline(bike_train, 5, experiment_name=EXP_NAME)
+
+# COMMAND ----------
+
+mlflow.set_experiment(EXP_PATH)
 
 # COMMAND ----------
 
@@ -29,7 +39,7 @@ predictions, mse, r2 = model_utils.run_inference(model, bike_prod, run_name='ori
 # COMMAND ----------
 
 # Change the test dataset (2 features)
-adjusted_bike_prod = bike_prod.copy()
+adjusted_bike_prod = data_utils.update_feature_data(bike_prod)
 
 # COMMAND ----------
 
