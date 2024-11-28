@@ -25,7 +25,7 @@ EXP_PATH = f"{EXP_DIR}/{EXP_NAME}"
 
 # Use AutoML to train an ML model - evaluate
 # using R2 metric
-model, model_uri, model_name = model_utils.run_model_train_pipeline(bike_train, 5, experiment_name=EXP_NAME)
+model, model_uri, model_name = model_utils.run_model_train_pipeline(bike_train, 5, experiment_name=f"{EXP_NAME}_automl")
 
 # COMMAND ----------
 
