@@ -33,4 +33,10 @@ def run_inference(model, test_df, run_name):
         mlflow.log_metric('mse', mse)
         mlflow.log_metric('r2', r2)
 
+        # Log metrics to MLflow
+        mlflow.log_metric("mse", mse)
+        mlflow.log_metric("r2", r2)
+
+        print(f"Run Name: {run_name} -> MSE: {mse}, R²: {r2}")
+
     return predictions, mse, r2
