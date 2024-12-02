@@ -87,17 +87,86 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- USAGE EXAMPLES -->
-## Roadmap
+## 🔀 Roadmap
 
 This section outlines the key steps and outcomes of the analysis, showcasing how the project can be applied effectively. Screenshots, code examples, and visualizations are included to provide a comprehensive understanding of the workflow. Additional resources and documentation links are provided where applicable.
 
 - ### Exploratory Data Analysis (EDA) and Insights
   This phase focuses on uncovering patterns and trends in the data. Key visualizations and statistical summaries are presented to provide a clear understanding of the dataset. Screenshots and plots highlight relationships, distributions, and potential anomalies.
 
+  **Distribution of Bike Rentals :**
+    The majority of bike rental counts are relatively low, with a right-skewed distribution suggesting occasional higher rental counts. This highlights the presence of outliers or peak demand periods.
+
+  **Bike Rentals Over Time:**
+  The time series plot shows seasonality and trends in bike rentals, with higher counts observed during warmer months, reflecting fluctuations in demand potentially driven by weather or other temporal factors.
+
+  **Feature Correlation Heatmap :** Provides insights into the relationships between variables in the dataset. This heatmap helps identify features that significantly impact the target variable, aiding in feature selection for modeling.
+
+  *Key observations :*
+
+    - strong positive correlation between “cnt” (the target variable) and both “registered” and “casual” users
+
+    - Moderate positive correlation with “temp” and “atemp”.
+
+    - Negative correlations with features like “hum” and “windspeed” suggest these factors might negatively influence bike rentals.
+
+
+  **Humidity vs. Bike Rentals:** 
+  The scatter plot shows no strong linear relationship between humidity and bike rentals, but higher humidity levels might slightly reduce rental counts.
+
+  **Temperature vs. Bike Rentals:** 
+  The scatter plot reveals a positive relationship between temperature and bike rentals, with higher rental activity observed as temperatures increase, up to a certain threshold.
+
+  **Bike Rentals by Day of the Week:**
+  The boxplot shows relatively consistent bike rental distributions across the days of the week, with slightly higher counts observed on weekends (days 5 and 6), suggesting increased leisure activity during these days.
+
+  **Bike Rentals by Season:**
+  The boxplot highlights higher bike rentals in fall (season 3) and summer (season 2), while spring (season 1) and winter (season 4) show lower counts, likely due to less favorable weather conditions during these seasons. 
+
+
+
+
   [PLACEHOLDER FOR IMAGES]
 
-- ### Data Pipeline
-  The data pipeline automates the process from data ingestion to preprocessing and feature engineering. Screenshots and diagrams illustrate the pipeline architecture, highlighting its scalability and robustness.
+<!-- USAGE EXAMPLES -->
+## 📊 Data Pipeline
+
+  The data pipeline streamlines the entire process from data ingestion to preprocessing and feature engineering, ensuring efficiency and accuracy. To showcase its architecture, we’ve included detailed screenshots and diagrams that emphasize its scalability and robustness. Databricks was selected for     pipeline orchestration due to its powerful capabilities and suitability for our requirements.
+
+  
+  #### **Key Components:**
+
+  ● Data Cleaning & Preprocessing: Ensuring data quality and consistency.
+  
+  ● Parallelized Model Training: Accelerating training with distributed computing.
+  
+  ● Hyperparameter Tuning: Optimizing model performance.
+  
+  ● Model Selection: Identifying the best-performing model.
+  
+  ● Experiment Logging: Tracking and managing experiments for reproducibility and analysis.
+  
+  This approach ensures a seamless, efficient, and reliable pipeline tailored for robust machine learning workflows.
+
+
+  #### **Databricks Features:**
+  
+  *Databricks* provdides the following features:
+
+  - Low-code/no-code interface via UI or Python API
+
+  - Generates EDA & trial notebooks
+
+  - Integration with Databricks feature store and MLflow
+
+  - Configurable evaluation metrics
+
+  - Includes code for explainability via SHAP plots
+
+  - Automatically balances imbalance datasets
+
+
+
 
   [PLACEHOLDER FOR IMAGES]
 
@@ -134,17 +203,11 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- CONTACT -->
-## Contact
+## 📩 Contact
 
 Gretchen Forbush - forbug@uchicago.edu</br>
 
