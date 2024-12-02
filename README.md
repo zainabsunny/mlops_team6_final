@@ -50,17 +50,15 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## 🚲 About The Project
 
-Demonstrating MLOps best practices via a bike-share regression model use case. Deployed on databricks on a 
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Demonstrating MLOps best practices through a bike-share machine learning model use case. The pipeline is deployed on Databricks, leveraging its robust capabilities for seamless orchestration and scalability. This project showcases the end-to-end workflow, from data ingestion to deployment, emphasizing automation, reproducibility, and efficient collaboration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
-## Getting Started
+## ⚙️ Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
@@ -75,76 +73,127 @@ In order to run this project and leverage all of the intended features, the repo
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Roadmap
+<!-- Roadmap -->
+## 🔀 Roadmap
 
 This section outlines the key steps and outcomes of the analysis, showcasing how the project can be applied effectively. Screenshots, code examples, and visualizations are included to provide a comprehensive understanding of the workflow. Additional resources and documentation links are provided where applicable.
 
 - ### Exploratory Data Analysis (EDA) and Insights
   This phase focuses on uncovering patterns and trends in the data. Key visualizations and statistical summaries are presented to provide a clear understanding of the dataset. Screenshots and plots highlight relationships, distributions, and potential anomalies.
 
+  **Distribution of Bike Rentals :**
+    The majority of bike rental counts are relatively low, with a right-skewed distribution suggesting occasional higher rental counts. This highlights the presence of outliers or peak demand periods.
+
+  **Bike Rentals Over Time:**
+  The time series plot shows seasonality and trends in bike rentals, with higher counts observed during warmer months, reflecting fluctuations in demand potentially driven by weather or other temporal factors.
+
+  **Feature Correlation Heatmap :** Provides insights into the relationships between variables in the dataset. This heatmap helps identify features that significantly impact the target variable, aiding in feature selection for modeling.
+
+  *Key observations :*
+
+    - strong positive correlation between “cnt” (the target variable) and both “registered” and “casual” users
+
+    - Moderate positive correlation with “temp” and “atemp”.
+
+    - Negative correlations with features like “hum” and “windspeed” suggest these factors might negatively influence bike rentals.
+
+
+  **Humidity vs. Bike Rentals:** 
+  The scatter plot shows no strong linear relationship between humidity and bike rentals, but higher humidity levels might slightly reduce rental counts.
+
+  **Temperature vs. Bike Rentals:** 
+  The scatter plot reveals a positive relationship between temperature and bike rentals, with higher rental activity observed as temperatures increase, up to a certain threshold.
+
+  **Bike Rentals by Day of the Week:**
+  The boxplot shows relatively consistent bike rental distributions across the days of the week, with slightly higher counts observed on weekends (days 5 and 6), suggesting increased leisure activity during these days.
+
+  **Bike Rentals by Season:**
+  The boxplot highlights higher bike rentals in fall (season 3) and summer (season 2), while spring (season 1) and winter (season 4) show lower counts, likely due to less favorable weather conditions during these seasons. 
+
+
+
+
   [PLACEHOLDER FOR IMAGES]
 
-- ### Data Pipeline
-  The data pipeline automates the process from data ingestion to preprocessing and feature engineering. Screenshots and diagrams illustrate the pipeline architecture, highlighting its scalability and robustness.
+<!-- Data Pipeline -->
+## 📊 Data Pipeline
+
+  The data pipeline streamlines the entire process from data ingestion to preprocessing and feature engineering, ensuring efficiency and accuracy. To showcase its architecture, we’ve included detailed screenshots and diagrams that emphasize its scalability and robustness. Databricks was selected for     pipeline orchestration due to its powerful capabilities and suitability for our requirements.
+
+  
+  #### **Key Components:**
+
+  - Data Cleaning & Preprocessing: Ensuring data quality and consistency.
+  
+  - Parallelized Model Training: Accelerating training with distributed computing.
+  
+  - Hyperparameter Tuning: Optimizing model performance.
+  
+  - Model Selection: Identifying the best-performing model.
+  
+  - Experiment Logging: Tracking and managing experiments for reproducibility and analysis.
+  
+  This approach ensures a seamless, efficient, and reliable pipeline tailored for robust machine learning workflows.
+
+
+  #### **Databricks Features:**
+  
+  *Databricks* provdides the following features:
+
+  - Low-code/no-code interface via UI or Python API
+
+  - Generates EDA & trial notebooks
+
+  - Integration with Databricks feature store and MLflow
+
+  - Configurable evaluation metrics
+
+  - Includes code for explainability via SHAP plots
+
+  - Automatically balances imbalance datasets
+
+
+
 
   [PLACEHOLDER FOR IMAGES]
 
-- ### Model Deployment and Monitoring
+<!-- Model Deployment and Monitoring -->
+## 🗂️ Model Deployment and Monitoring
 
   This section demonstrates how the model is deployed in a production environment. Monitoring tools and dashboards track performance metrics and ensure the model's reliability over time. Screenshots provide a visual guide to the monitoring process.
 
-  [PLACEHOLDER FOR IMAGES]
+  [PLACEHOLDER FOR SCREEN RECORD]
 
-- ### Validation and Continuous Improvement
+## ✅ Validation and Feature Adjustments
   Validation metrics, such as RMSE, and MAE are presented to evaluate model performance. This section also includes examples of changes made based on feedback or updated data, showcasing the iterative improvement process.
 
-  [PLACEHOLDER FOR IMAGES]
+### Feature Adjustments
+
+- **Temperature (temp):**  
+  The temperature feature was modified by increasing its values by 20%. This adjustment was implemented to test the model's resilience to significant changes in environmental conditions that might impact predictions.
+
+- **Windspeed (windspeed):**  
+  The windspeed feature was adjusted by decreasing its values by 20%. This change was introduced to evaluate the model's ability to maintain performance under altered conditions in this feature.
+
+### Validation Results
+
+After adjusting the features, the model's robustness was thoroughly tested. While the model remained largely robust to these feature changes, a slight decline in performance was observed. Specifically:
+
+- The 20% increase in **temperature** introduced minor variations in the prediction accuracy.  
+- Similarly, the 20% decrease in **windspeed** led to marginal impacts on the model's outputs.
+
+Overall, the model demonstrated resilience, maintaining reasonable performance even under modified feature conditions. This indicates that the model's generalization capabilities are adequate for scenarios with moderate environmental variability. However, further fine-tuning or feature scaling might be considered to enhance robustness to larger fluctuations in key features like temperature and windspeed.
+  
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- CONTACT -->
-## Contact
+## 📩 Contact
 
 Gretchen Forbush - forbug@uchicago.edu</br>
 
@@ -162,7 +211,6 @@ Project Link: [https://github.com/forbug/mlops_team6_final](https://github.com/f
 ## Acknowledgments
 
 * []()
-* []()
-* []()
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
