@@ -190,6 +190,11 @@ This section outlines the key steps and outcomes of the analysis, showcasing how
 
   This section demonstrates how the model is deployed in a production environment. Monitoring tools and dashboards track performance metrics and ensure the model's reliability over time. Screenshots provide a visual guide to the monitoring process.
 
+  Tracking the perfomance of different models within Databrick's user interface:
+  <img width="2107" alt="Diff_Runs" src="https://github.com/user-attachments/assets/8f102279-70b0-41cf-a14c-ae715fab923a">
+
+
+
   [PLACEHOLDER FOR SCREEN RECORD]
 
 <!-- VALIDATION & FEATURE ADJUSTMENTS -->
@@ -206,7 +211,7 @@ This section outlines the key steps and outcomes of the analysis, showcasing how
 
   Image below shows the changes in the model metrics both before and after applying the feature adjustments: 
 
-<img width="1616" alt="Model Metrics _ Comparison" src="https://github.com/user-attachments/assets/2dda8242-4fe2-486f-a827-755d397a781a">
+  <img width="1616" alt="Model Metrics _ Comparison" src="https://github.com/user-attachments/assets/2dda8242-4fe2-486f-a827-755d397a781a">
 
 
 
