@@ -204,6 +204,13 @@ This section outlines the key steps and outcomes of the analysis, showcasing how
 - **Windspeed (windspeed):**  
   The windspeed feature was adjusted by decreasing its values by 20%. This change was introduced to evaluate the model's ability to maintain performance under altered conditions in this feature.
 
+  Image below shows the changes in the model metrics both before and after applying the feature adjustments: 
+
+<img width="1616" alt="Model Metrics _ Comparison" src="https://github.com/user-attachments/assets/2dda8242-4fe2-486f-a827-755d397a781a">
+
+
+
+
 ### Validation Results
 
 After adjusting the features, the model's robustness was thoroughly tested. While the model remained largely robust to these feature changes, a slight decline in performance was observed. Specifically:
