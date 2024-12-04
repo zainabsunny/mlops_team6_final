@@ -33,17 +33,13 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#roadmap">Usage</a></li>
+    <li><a href="#data-pipeline">Data Pipeline</a></li>
+    <li><a href="#model-deployment-&-monitoring">Model Deployment & Monitoring</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#acknowledgements">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -60,20 +56,28 @@ Demonstrating MLOps best practices through a bike-share machine learning model u
 <!-- GETTING STARTED -->
 ## ⚙️ Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-In order to run this project and leverage all of the intended features, the repository must be housed in a databricks workspace. In order to set up the folders properly, you must follow the following instructions:
+In order to run this project and leverage all of the intended features, the repository must be housed in a *Databricks* workspace. In order to set up the folders properly, you must follow the following instructions:
 1. [Configure your databricks/git credentials.](https://docs.databricks.com/en/repos/repos-setup.html)
 2. [Create a git folder inside a databricks workspace using the repo URL.](https://docs.databricks.com/en/repos/git-operations-with-repos.html)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+Once your repository has been set up in *Databricks*, open the repository and select `model_inferencing.ipynb`
+
+<div align="center">
+<img src="images/directory_img.png" alt="Logo" width="120" height="120">
+</div>
+
+Ensure that you have an instance running with the following specifications:
+<div align="center">
+<img src="images/cluster_img.png" alt="Logo" width="360" height="60">
+</div>
+
+The, select the **Run All** button in the top right-hand corner of the workspace and watch the inferencing begin!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p
+                                                        >
 
 
-
-<!-- Roadmap -->
+<!-- ROADMAP -->
 ## 🔀 Roadmap
 
 This section outlines the key steps and outcomes of the analysis, showcasing how the project can be applied effectively. Screenshots, code examples, and visualizations are included to provide a comprehensive understanding of the workflow. Additional resources and documentation links are provided where applicable.
@@ -84,8 +88,16 @@ This section outlines the key steps and outcomes of the analysis, showcasing how
   **Distribution of Bike Rentals :**
     The majority of bike rental counts are relatively low, with a right-skewed distribution suggesting occasional higher rental counts. This highlights the presence of outliers or peak demand periods.
 
+    <div align="center">
+    <img src="images/bike_rentals_distrib.png" alt="Logo" width="360" height="280">
+    </div>
+
   **Bike Rentals Over Time:**
   The time series plot shows seasonality and trends in bike rentals, with higher counts observed during warmer months, reflecting fluctuations in demand potentially driven by weather or other temporal factors.
+
+    <div align="center">
+    <img src="images/bike_rentals_time.png" alt="Logo" width="360" height="280">
+    </div>
 
   **Feature Correlation Heatmap :** Provides insights into the relationships between variables in the dataset. This heatmap helps identify features that significantly impact the target variable, aiding in feature selection for modeling.
 
@@ -96,26 +108,42 @@ This section outlines the key steps and outcomes of the analysis, showcasing how
     - Moderate positive correlation with “temp” and “atemp”.
 
     - Negative correlations with features like “hum” and “windspeed” suggest these factors might negatively influence bike rentals.
+ 
+    <div align="center">
+    <img src="images/bike_rentals_correlation.png" alt="Logo" width="360" height="280">
+    </div>
 
 
   **Humidity vs. Bike Rentals:** 
   The scatter plot shows no strong linear relationship between humidity and bike rentals, but higher humidity levels might slightly reduce rental counts.
 
+    <div align="center">
+    <img src="images/bike_rentals_humidity.png" alt="Logo" width="360" height="280">
+    </div>
+
   **Temperature vs. Bike Rentals:** 
   The scatter plot reveals a positive relationship between temperature and bike rentals, with higher rental activity observed as temperatures increase, up to a certain threshold.
+
+    <div align="center">
+    <img src="images/bike_rentals_temp.png" alt="Logo" width="360" height="280">
+    </div>
 
   **Bike Rentals by Day of the Week:**
   The boxplot shows relatively consistent bike rental distributions across the days of the week, with slightly higher counts observed on weekends (days 5 and 6), suggesting increased leisure activity during these days.
 
+    <div align="center">
+    <img src="images/bike_rentals_dow.png" alt="Logo" width="360" height="280">
+    </div>
+
   **Bike Rentals by Season:**
-  The boxplot highlights higher bike rentals in fall (season 3) and summer (season 2), while spring (season 1) and winter (season 4) show lower counts, likely due to less favorable weather conditions during these seasons. 
+  The boxplot highlights higher bike rentals in fall (season 3) and summer (season 2), while spring (season 1) and winter (season 4) show lower counts, likely due to less favorable weather conditions during these seasons.
+
+    <div align="center">
+    <img src="images/bike_rentals_season.png" alt="Logo" width="360" height="280">
+    </div>
 
 
-
-
-  [PLACEHOLDER FOR IMAGES]
-
-<!-- Data Pipeline -->
+<!-- DATA PIPELINE -->
 ## 📊 Data Pipeline
 
   The data pipeline streamlines the entire process from data ingestion to preprocessing and feature engineering, ensuring efficiency and accuracy. To showcase its architecture, we’ve included detailed screenshots and diagrams that emphasize its scalability and robustness. Databricks was selected for     pipeline orchestration due to its powerful capabilities and suitability for our requirements.
@@ -157,14 +185,15 @@ This section outlines the key steps and outcomes of the analysis, showcasing how
 
   [PLACEHOLDER FOR IMAGES]
 
-<!-- Model Deployment and Monitoring -->
-## 🗂️ Model Deployment and Monitoring
+<!-- MODEL DEPLOYMENT & MONITORING -->
+## 🗂️ Model Deployment & Monitoring
 
   This section demonstrates how the model is deployed in a production environment. Monitoring tools and dashboards track performance metrics and ensure the model's reliability over time. Screenshots provide a visual guide to the monitoring process.
 
   [PLACEHOLDER FOR SCREEN RECORD]
 
-## ✅ Validation and Feature Adjustments
+<!-- VALIDATION & FEATURE ADJUSTMENTS -->
+## ✅ Validation & Feature Adjustments
   Validation metrics, such as RMSE, and MAE are presented to evaluate model performance. This section also includes examples of changes made based on feedback or updated data, showcasing the iterative improvement process.
 
 ### Feature Adjustments
@@ -185,11 +214,7 @@ After adjusting the features, the model's robustness was thoroughly tested. Whil
 Overall, the model demonstrated resilience, maintaining reasonable performance even under modified feature conditions. This indicates that the model's generalization capabilities are adequate for scenarios with moderate environmental variability. However, further fine-tuning or feature scaling might be considered to enhance robustness to larger fluctuations in key features like temperature and windspeed.
   
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
 
 
 <!-- CONTACT -->
@@ -209,8 +234,7 @@ Project Link: [https://github.com/forbug/mlops_team6_final](https://github.com/f
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-* []()
+This project was completed as the final project for the MLOps course in UChicago's Master's in Applied Data Science curriculum in Fall 2024. Thank you to Arnab Bose, our professor, and Kshitij Mittal, our TA, for your teaching and guidance!
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
