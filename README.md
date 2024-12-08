@@ -166,7 +166,7 @@ This section outlines the key steps and outcomes of the analysis, showcasing how
 
   #### **Databricks Features:**
   
-  *Databricks* provdides the following features:
+  *Databricks* provides the following features:
 
   - Low-code/no-code interface via UI or Python API
 
@@ -183,8 +183,6 @@ This section outlines the key steps and outcomes of the analysis, showcasing how
 
 
 
-  [PLACEHOLDER FOR IMAGES]
-
 <!-- MODEL DEPLOYMENT & MONITORING -->
 ## 🗂️ Model Deployment & Monitoring
 
@@ -195,7 +193,6 @@ This section outlines the key steps and outcomes of the analysis, showcasing how
 
 
 
-  [PLACEHOLDER FOR SCREEN RECORD]
 
 <!-- VALIDATION & FEATURE ADJUSTMENTS -->
 ## ✅ Validation & Feature Adjustments
